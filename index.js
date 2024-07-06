@@ -4,7 +4,11 @@ function random_color() {
   var s3 = Math.floor(Math.random() * 256);
   if (s1 + s2 + s3 < 200) {
     $(".col-sm-4").css("color", "white");
-  } else {
+  }
+  else if (s1 + s2 + s3 < 500)  {
+    $(".col-sm-4").css("color", "black");
+  }
+  else {
     $(".col-sm-4").css("color", "black");
   }
   return `rgb(${s1}, ${s2}, ${s3})`;
